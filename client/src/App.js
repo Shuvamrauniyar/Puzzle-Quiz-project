@@ -1,14 +1,33 @@
 import './App.css';
-import './puzzleGrid.css'
-import React from 'react';
+import './puzzleGrid.css';
+import './timer.css';
+import React, { useState } from 'react';
 import TreasureHunt from './TreasureHunt';
 import PuzzleGrid from './puzzlegrid';
+import Timer from './timer';
+
 function App() {
+
+  const [getstart, setStart] = useState(false);
+
+  function startTimer() {
+    setStart(true);
+  }
+  function restartPage() {
+    window.location.reload();
+  }
   return (
     <div className="App">
       {/* <h1>Treasure Game</h1> */}
       <TreasureHunt />,
-      <PuzzleGrid />,
+      <button className='startButton' onClick={startTimer} >Start Game</button>
+      {getstart && <Timer />}
+      <br></br>
+      <button className='restartButton' onClick={restartPage} >Restart</button>
+      {
+        getstart && <PuzzleGrid />
+      }
+
 
     </div>
   );

@@ -1,7 +1,16 @@
 .App {
   align-content: center;
-  color: aqua;
-  background-color: antiquewhite;
+  color: rgb(12, 50, 50);
+  background-color: hsla(100, 24%, 75%, 0.813);
   grid-template-columns:subgrid;
   -ms-grid-column-align: stretch;
+}
+.startButton{
+  margin-top: 1%;
+  color: rgb(15, 20, 25);
+}
+.restartButton{
+  margin-top: 1%;
+  margin-left: 0.5%;
+  color: rgb(15, 20, 25);
 }

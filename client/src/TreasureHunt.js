@@ -6,6 +6,7 @@ function TreasureHunt() {
 
   function handleClick() {
     setMessage('Congratulations! You found the treasure!');
+
   }
 
   function handleClueClick() {
