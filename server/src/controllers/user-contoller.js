@@ -20,6 +20,26 @@ const create = async(req,res) => {
     });
     }
 }
+const signIn = async(req,res) => {
+    try {
+        console.log('in controller layer = ',req.body);
+        const response = await userRepository.signIn(req.body.email,req.body.password);
+        return res.status(201).json({
+            message: ' Sucessfully signin ',
+            err: {},
+            data: response,
+            success: true
+        });
+    } catch (error) {
+        console.log(error);
+      return res.status(500).json({
+        data:{},
+        success: false,
+        message: 'Not able to signin' ,
+        err: error
+    });
+    }
+}
 const updateData = async(req,res) => {
     try {
         const response = await userRepository.updateData(req.body);
@@ -79,6 +99,7 @@ const getTopScorer = async(req,res) => {
 }
 module.exports = {
     create,
+    signIn,
     updateData,
     getAll,
     getTopScorer
