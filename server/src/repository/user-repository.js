@@ -34,10 +34,15 @@ async function signIn(email,inputPassword){
 }
 const updateData = async(data) => {
     try {
-
-        const userData = await User.findByPk(data.id);
+        console.log(data.email);
+        const userData = await User.findOne({
+            where:{
+                email:data.email
+            }
+        });
+        // console.log(userData);
         if(!userData)
-        throw{err:'missing id'};
+        throw{err:'missing email'};
         userData.time = data.time;
         userData.score = data.score;
         await userData.save();
@@ -47,7 +52,7 @@ const updateData = async(data) => {
         if(error.err)
         throw error;
         else
-        throw {err:'error in repository layer'};
+        throw {err:'error in repository layer while updating'};
     }
 } 
 const getAll = async() => {
