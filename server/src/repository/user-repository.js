@@ -2,6 +2,7 @@ const {User} = require('../models/index');
 
 const createUser = async(data) => {
     try {
+        console.log(data);
         const response = await User.create(data);
         return response;
     } catch (error) {

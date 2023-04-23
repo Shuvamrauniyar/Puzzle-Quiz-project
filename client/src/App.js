@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+// import { BrowserRouter , Routes, Route } from 'react-router-dom';
 import './App.css';
-import './puzzleGrid.css';
-import './timer.css';
-import './login.css';
-import Login from './login';
+// import './puzzleGrid.css';
+// import './timer.css';
+// import './login.css';
+// import Login from './login';
 import TreasureHunt from './TreasureHunt';
 import PuzzleGrid from './puzzlegrid';
 import Timer from './timer';
@@ -21,7 +22,6 @@ function App() {
   return (
     <div className="App">
       {/* <h1>Treasure Game</h1> */}
-      <Login />,
       <TreasureHunt />,
       <button className='startButton' onClick={startTimer} >Start Game</button>
       {getstart && <Timer />}
@@ -30,7 +30,6 @@ function App() {
       {
         getstart && <PuzzleGrid />
       }
-
 
     </div>
   );

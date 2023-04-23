@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+import './puzzleGrid.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 function PuzzleGrid() {
@@ -124,8 +125,6 @@ function PuzzleGrid() {
                 toastStyle={toastStyle}
               />
             </div>
-
-
             <p>{score}</p>
           </div>
         )}
