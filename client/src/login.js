@@ -66,6 +66,7 @@ function Login() {
                 name: name
             }
             if (email) {
+                globalEmail = email;
                 const signUpURL = 'http://localhost:3001/api/signup';
                 const response = await axios.post(signUpURL, data);
                 if (response)
