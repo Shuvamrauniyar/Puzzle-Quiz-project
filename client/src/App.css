@@ -7,10 +7,65 @@
 }
 .startButton{
   margin-top: 1%;
-  color: rgb(15, 20, 25);
+  background-color: #0077cc;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 16px;
+  transition: all 0.2s ease-in-out;
 }
 .restartButton{
   margin-top: 1%;
   margin-left: 0.5%;
-  color: rgb(15, 20, 25);
+  background-color: #0077cc;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 12px;
+  transition: all 0.2s ease-in-out;
+}
+.leaderboardButton{
+  margin-left:40%;
+  margin-top:-10%;
+  background-color: #0077cc;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 16px;
+  transition: all 0.2s ease-in-out;
+}
+.logoutButton{
+  margin-left:45%;
+  margin-top:-10%;
+  background-color: #d61010;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.startButton:hover {
+  background-color: #3e4952;
+}
+.restartButton:hover {
+  background-color: #3e4952;
+}
+.leaderboardButton:hover {
+  background-color: #3e4952;
+}
+.logoutButton:hover {
+  background-color: #3e4952;
 }

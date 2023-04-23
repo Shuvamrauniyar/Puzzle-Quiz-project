@@ -8,10 +8,10 @@ import Leaderboard from './leaderboard';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     // <App /> ,
-    // <FinalApp/>
-    <Leaderboard/>
+    <FinalApp />
+    // <Leaderboard/>
     // <PuzzleGrid />
-    // <Login/>
+    //  <Login/>
 );
 
 

@@ -2,24 +2,24 @@ import React, { useState } from 'react';
 
 function TreasureHunt() {
   const [message, setMessage] = useState('');
-  const [clue, setClue] = useState('');
+  const [instr, setInstr] = useState('');
 
   function handleClick() {
-    setMessage('Congratulations! You found the treasure!');
+    setMessage('You need to answer correctly to score the highest !');
 
   }
 
-  function handleClueClick() {
-    setClue('The treasure is hidden under a tree.');
+  function handleInstrClick() {
+    setInstr('Click on the boxes,you will get the questions,answer it wisely');
   }
 
   return (
     <div>
       <h1>Treasure Hunt</h1>
       <p>{message}</p>
-      {clue && <p>Clue: {clue}</p>}
-      <button onClick={handleClick}>Find the treasure</button>
-      <button onClick={handleClueClick}>Get a clue</button>
+      {instr && <p>Instr: {instr}</p>}
+      <button onClick={handleClick}>Your Goal</button>
+      <button onClick={handleInstrClick}>How to play</button>
     </div>
   );
 }

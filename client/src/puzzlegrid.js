@@ -3,6 +3,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import './puzzleGrid.css';
 import 'react-toastify/dist/ReactToastify.css';
 
+
+let Score = 0;
+
 function PuzzleGrid() {
   const [score, setScore] = useState(0);
   const [ques, setQues] = useState('');
@@ -16,22 +19,28 @@ function PuzzleGrid() {
   const inputRef = useRef(null);
 
   let inputCorrect = false;
+
+  function handleChange(event) {
+    setInputValue(event.currentTarget.value);
+  }
   function handleInputChange(event) {
+    event.preventDefault();
+    // setInputValue(inputRef.current.value);
+    console.log('inputval', inputValue);
+    console.log('ans', ans);
 
-    setInputValue(inputRef.current.value);
-
-    console.log(inputValue);
-    console.log(ans);
     if (inputValue.toLowerCase() == ans) {
       let dummyScore = score;
       dummyScore += 100;
       setScore(dummyScore);
+      Score = dummyScore;
+      console.log(Score);
       inputCorrect = true;
       toast("Correct!");
     }
     else
       toast("Wrong!");
-    console.log('score is ', score);
+    // console.log('score is ', score);
 
   }
 
@@ -105,7 +114,11 @@ function PuzzleGrid() {
           <div className="popup">
             <p className='question'>{ques}</p>
             {/* <button onClick={togglePopup}>Close</button> */}
-            <input type="text" ref={inputRef} placeholder='Give your answer'></input>
+            <input type="text"
+              ref={inputRef}
+              onChange={handleChange}
+              value={inputValue}
+              placeholder='Give your answer'></input>
             <br></br>
 
             <button onClick={handleInputChange}>Submit</button>
@@ -125,7 +138,7 @@ function PuzzleGrid() {
                 toastStyle={toastStyle}
               />
             </div>
-            <p>{score}</p>
+            {/* <p>{score}</p> */}
           </div>
         )}
       </div>
@@ -155,9 +168,9 @@ function PuzzleGrid() {
       <div className="card">
         <button className="togglePopup" id='9' onClick={togglePopup}>Show Popup1</button>
       </div>
-      
+
     </div>
   );
 }
-
+export { Score };
 export default PuzzleGrid;
