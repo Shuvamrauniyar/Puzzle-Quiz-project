@@ -29,4 +29,16 @@
   - VS-CODE
   - Git commands, Git BASH, Github
   
+### Screenshots:
+  ![image](https://user-images.githubusercontent.com/96899142/233868936-0508782a-7912-4583-a145-df0905ca4a07.png)
   
+  ![image](https://user-images.githubusercontent.com/96899142/233869341-1977eb37-e3c7-47d1-9950-e07a97fcc91d.png)
+
+![image](https://user-images.githubusercontent.com/96899142/233869346-21361c4f-c11f-4065-8aa2-e1c2117cbc86.png)
+
+  
+
+https://user-images.githubusercontent.com/96899142/233869224-2cadb39d-c32b-40d4-b8f8-67531a65af26.mp4
+
+
+
