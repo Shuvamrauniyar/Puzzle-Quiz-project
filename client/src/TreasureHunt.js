@@ -10,12 +10,12 @@ function TreasureHunt() {
   }
 
   function handleInstrClick() {
-    setInstr('Click on the boxes,you will get the questions,answer it wisely');
+    setInstr('Click StartGame then click on the boxes,you will get the questions,answer it wisely');
   }
 
   return (
     <div>
-      <h1>Treasure Hunt</h1>
+      <h1>Puzzle Quiz</h1>
       <p>{message}</p>
       {instr && <p>Instr: {instr}</p>}
       <button onClick={handleClick}>Your Goal</button>

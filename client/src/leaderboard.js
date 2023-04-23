@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './leaderboard.css';
+import { Score } from './puzzlegrid';
+import { Time } from './timer';
+import { globalEmail } from './login';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 function Leaderboard() {
@@ -11,9 +14,29 @@ function Leaderboard() {
         navigate('/game');
         window.location.reload();
     }
+    // try {
 
+
+
+    //   } catch (error) {
+    //     navigate('/');
+    //     throw { err: 'not able to update' }
+    //   }
+    // navigate('/');
     async function fetchPlayers() {
         try {
+            console.log(globalEmail);
+            let updateURL = 'http://localhost:3001/api/update';
+            let data = {
+                email: globalEmail,
+                score: Score,
+                time: Time
+            }
+            const response1 = await axios.patch(updateURL, data);
+            if (response1.data.success)
+                console.log('updated ');
+            else
+                console.log('not updated ');
             const response = await axios.get('http://localhost:3001/api/leaderboards');
             if (response) {
                 // const player = Array.from(response);
