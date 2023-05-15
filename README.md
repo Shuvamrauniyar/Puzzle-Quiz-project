@@ -1,6 +1,6 @@
 # Puzzle Quiz game:
 ## Overview:
-- This is an fullstack web app where user can play puzzle like quiz game where his main target is to score highest score throughout the game.
+- This is a fullstack web app where user can play puzzle like quiz game where his main target is to score highest score throughout the game.
 
 ## Features:
 - A login/signup page.
